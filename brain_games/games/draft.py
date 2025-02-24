@@ -1,18 +1,27 @@
-import random
-import math
+from random import randint
 
-
-def check_answer(text: str):
-    num1, num2 = int(text.split()[0]), int(text.split()[1])
-    return math.gcd(num1, num2)
+from brain_games.engine import engine
 
 
 
-def get_question() -> str:
-    num1, num2 = random.randint(1, 100), random.randint(1, 100)
-    return f'{num1} {num2}'
+PROGRESSION_LENGTH = 10
 
-def game_gcd() -> None:
-    engine(INSTRUCTION, check_answer, get_question)
+DESCRIPTION = 'What number is missing in the progression?'
 
-print(check_answer(get_question()))
+
+def make_game_data(): 
+    progression = []
+    initial_value = randint(1, 100)
+    step_value = randint(1, 100)
+
+    for i in range(PROGRESSION_LENGTH):
+        progression.append(str(initial_value + i * step_value))
+
+    hidden_element_index = randint(0, PROGRESSION_LENGTH - 1)
+    correct_answer = progression[hidden_element_index]
+    progression[hidden_element_index] = '..'
+    question = ' '.join(progression)
+    print(type(question), question)
+    return (question, correct_answer)
+
+make_game_data()

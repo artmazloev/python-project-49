@@ -22,4 +22,4 @@ def engine(instruction, check_function, data_for_question):
             print(NEGATIVE_FEEDBACK)
             break
     else:
-        print(CONGRATULATIONS)  # проверить
+        print(CONGRATULATIONS)
