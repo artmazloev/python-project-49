@@ -1,25 +1,30 @@
 from random import randint
 
-from brain_games.engine import engine
-
-
-
 PROGRESSION_LENGTH = 10
 
-DESCRIPTION = 'What number is missing in the progression?'
+INSTRUCTION = "What number is missing in the progression?"
 
 
-def make_game_data(): 
+def check_answer(question):
+    progression = question.split()
+    if not (progression[0] == ".." or progression[1] == ".."):
+        diff = int(progression[1]) - int(progression[0])
+    else:
+        diff = int(progression[3]) - int(progression[2])
+    missing_value = progression.index("..")
+    correct_value = str(int(progression[missing_value - 1]) + diff)
+    return correct_value
+
+
+def get_question():
     progression = []
     initial_value = randint(1, 100)
-    step_value = randint(1, 100)
+    step_value = randint(1, 5)
 
     for i in range(PROGRESSION_LENGTH):
         progression.append(str(initial_value + i * step_value))
 
     hidden_element_index = randint(0, PROGRESSION_LENGTH - 1)
-    correct_answer = progression[hidden_element_index]
-    progression[hidden_element_index] = '..'
-    question = ' '.join(progression)
-    print(type(question), question)
-    return (question, correct_answer)
+    progression[hidden_element_index] = ".."
+    question = " ".join(progression)
+    return question

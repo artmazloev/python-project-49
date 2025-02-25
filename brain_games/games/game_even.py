@@ -2,10 +2,11 @@ import random
 
 from brain_games.engine import engine
 
-INSTRUCTION = """Answer "yes" if given number is prime. Otherwise answer "no"."""
+INSTRUCTION = """Answer "yes" if given number is prime. 
+              Otherwise answer "no"."""
 
 
-def is_even(n):
+def check_answer(n):
     return "yes" if n % 2 == 0 else "no"
 
 
@@ -14,6 +15,5 @@ def get_question():
     return number_for_question
 
 
-def game_even():
-    engine(INSTRUCTION, is_even, get_question)
-
+def start_game():
+    engine(INSTRUCTION, check_answer, get_question)
