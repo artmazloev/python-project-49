@@ -1,51 +1,56 @@
-Hexlet Code
+# Hexlet Code
 
-### Hexlet tests and linter status:
-[![Actions Status](https://github.com/artmazloev/python-project-49/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/artmazloev/python-project-49/actions)
+## Hexlet tests and linter status
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/d3af33a8da8c267828af/maintainability)](https://codeclimate.com/github/artmazloev/python-project-49/maintainability)
+![Actions Status](https://github.com/artmazloev/python-project-49/actions/workflows/hexlet-check.yml/badge.svg)
+![Maintainability](https://api.codeclimate.com/v1/badges/d3af33a8da8c267828af/maintainability)
 
+## Description
 
-Description
-Hexlet Code is a collection of 5 math-related games designed to challenge and improve your arithmetic skills. The games include:
+**Hexlet Code** — это набор из 5 математических игр, предназначенных для проверки и улучшения ваших арифметических навыков. Игры включают:
 
-Checking if a number is prime
-Inserting a number into an arithmetic progression
-Providing the result of a calculation (multiplication, addition, subtraction)
-Answering if a number is even
-Finding the greatest common divisor of two numbers
+- Проверка, является ли число простым
+- Вставка числа в арифметическую прогрессию
+- Вычисление результата арифметической операции (умножение, сложение, вычитание)
+- Определение, является ли число четным
+- Нахождение наибольшего общего делителя двух чисел
 
-Installation
-To install the games, ensure you have Poetry installed on your machine, then run the following commands:
+## Installation
 
-package-install
+Для установки игр убедитесь, что у вас установлены **Python >= 3.12** и пакетный менеджер **uv**, затем выполните команды:
 
-Games
-To start playing, you can run the following commands:
-To play "Check if a number is prime":
-brain-prime
-To insert a number into an arithmetic progression:
-brain-progression
-To provide the result of a calculation:
-brain-calc
-To answer if a number is even:
-brain-even
-To find the greatest common divisor of two numbers:
-brain-gcd
+```sh
+uv sync
+make package-install
+```
 
-Demonstrations
+## Games
 
-[![Actions Status](https://github.com/artmazloev/python-project-49/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/artmazloev/python-project-49/actions)
+Для запуска игр используйте следующие команды:
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/d3af33a8da8c267828af/maintainability)](https://codeclimate.com/github/artmazloev/python-project-49/maintainability)
+- **Проверить, является ли число простым:**
+  ```sh
+  brain-prime
+  ```
+- **Вставить число в арифметическую прогрессию:**
+  ```sh
+  brain-progression
+  ```
+- **Рассчитать результат арифметической операции:**
+  ```sh
+  brain-calc
+  ```
+- **Определить, является ли число четным:**
+  ```sh
+  brain-even
+  ```
+- **Найти наибольший общий делитель двух чисел:**
+  ```sh
+  brain-gcd
+  ```
 
+## Demonstrations
 
-Demonstration of brain-even: asciicast
+[![Demo](https://asciinema.org/a/jSSgHUMYbqfsc086de8kpOG7B.svg)](https://asciinema.org/a/jSSgHUMYbqfsc086de8kpOG7B)
 
-Demonstration of brain-calc: asciicast
-
-Demonstration of brain-gcd: asciicast
-
-Demonstration of brain-progression: asciicast
-
-Demonstration of brain-prime: asciicast
+[Смотреть демо на Asciinema](https://asciinema.org/a/jSSgHUMYbqfsc086de8kpOG7B)
