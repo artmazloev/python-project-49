@@ -7,6 +7,7 @@ INSTRUCTION = (
     'Otherwise answer "no".'
 )
 
+
 def check_answer(n):
     return "yes" if n % 2 == 0 else "no"
 
