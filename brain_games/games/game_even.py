@@ -2,10 +2,7 @@ import random
 
 from brain_games.engine import engine
 
-INSTRUCTION = (
-    'Answer "yes" if the number is even, '
-    'otherwise answer "no".'
-)
+INSTRUCTION = 'Answer "yes" if the number is even, ' 'otherwise answer "no".'
 
 
 def check_answer(n):

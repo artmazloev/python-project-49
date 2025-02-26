@@ -9,11 +9,12 @@ def check_answer(question):
     progression = question.split()
     missing_value = progression.index("..")
 
-    if missing_value == 0:
+    if missing_value == 0:  # Пропущено первое число
         diff = int(progression[2]) - int(progression[1])
         correct_value = str(int(progression[1]) - diff)
     else:
-        diff = int(progression[1]) - int(progression[0])
+        diff = int(progression[missing_value + 1]) - int(
+            progression[missing_value - 1])
         correct_value = str(int(progression[missing_value - 1]) + diff)
 
     return correct_value
