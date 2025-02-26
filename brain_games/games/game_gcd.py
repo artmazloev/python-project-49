@@ -3,7 +3,7 @@ import random
 
 from brain_games.engine import engine
 
-INSTRUCTION = """Find the greatest common divisor of given numbers"""
+INSTRUCTION = """Find the greatest common divisor of given numbers."""
 
 
 def check_answer(text: str) -> str:
