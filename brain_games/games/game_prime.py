@@ -2,7 +2,7 @@ import random
 
 from brain_games.engine import engine
 
-INSTRUCTION = 'Answer "yes" if the number is prime. ' 'Otherwise answer "no".'
+INSTRUCTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def check_answer(question):
