@@ -3,7 +3,7 @@ import random
 from brain_games.engine import engine
 
 INSTRUCTION = """What is the result of the expression?"""
-MATH_SIGN = ("+", "-", "*", "/")
+MATH_SIGN = ("+", "-", "*")
 
 
 def check_answer(text: str):
