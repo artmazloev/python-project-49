@@ -7,12 +7,15 @@ INSTRUCTION = "What number is missing in the progression?"
 
 def check_answer(question):
     progression = question.split()
-    if not (progression[0] == ".." or progression[1] == ".."):
-        diff = int(progression[1]) - int(progression[0])
-    else:
-        diff = int(progression[3]) - int(progression[2])
     missing_value = progression.index("..")
-    correct_value = str(int(progression[missing_value - 1]) + diff)
+
+    if missing_value == 0:
+        diff = int(progression[2]) - int(progression[1])
+        correct_value = str(int(progression[1]) - diff)
+    else:
+        diff = int(progression[1]) - int(progression[0])
+        correct_value = str(int(progression[missing_value - 1]) + diff)
+
     return correct_value
 
 
