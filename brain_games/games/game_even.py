@@ -3,8 +3,8 @@ import random
 from brain_games.engine import engine
 
 INSTRUCTION = (
-    'Answer "yes" if given number is prime. '
-    'Otherwise answer "no".'
+    'Answer "yes" if the number is even, '
+    'otherwise answer "no".'
 )
 
 
