@@ -1,5 +1,6 @@
 import random
 
+from brain_games.const import RANDOM_MAX_VALUE, RANDOM_MIN_VALUE
 from brain_games.engine import engine
 
 INSTRUCTION = 'Answer "yes" if the number is even, ' 'otherwise answer "no".'
@@ -10,7 +11,7 @@ def check_answer(n):
 
 
 def get_question():
-    number_for_question = random.randint(0, 100)
+    number_for_question = random.randint(RANDOM_MIN_VALUE, RANDOM_MAX_VALUE)
     return number_for_question
 
 

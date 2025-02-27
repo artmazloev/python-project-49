@@ -1,5 +1,7 @@
 from random import randint
 
+from brain_games.const import RANDOM_MAX_VALUE, RANDOM_MIN_VALUE
+
 PROGRESSION_LENGTH = 10
 
 INSTRUCTION = "What number is missing in the progression?"
@@ -21,8 +23,8 @@ def check_answer(question):
 
 def get_question():
     progression = []
-    initial_value = randint(1, 100)
-    step_value = randint(1, 5)
+    initial_value = randint(RANDOM_MIN_VALUE, RANDOM_MAX_VALUE)
+    step_value = randint(RANDOM_MIN_VALUE, RANDOM_MAX_VALUE)
 
     for i in range(PROGRESSION_LENGTH):
         progression.append(str(initial_value + i * step_value))

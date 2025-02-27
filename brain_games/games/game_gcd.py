@@ -1,6 +1,7 @@
 import math
 import random
 
+from brain_games.const import RANDOM_MAX_VALUE, RANDOM_MIN_VALUE
 from brain_games.engine import engine
 
 INSTRUCTION = """Find the greatest common divisor of given numbers."""
@@ -12,7 +13,10 @@ def check_answer(text: str) -> str:
 
 
 def get_question() -> str:
-    num1, num2 = random.randint(1, 100), random.randint(1, 100)
+    num1, num2 = random.randint(
+        RANDOM_MIN_VALUE, RANDOM_MAX_VALUE), random.randint(
+        RANDOM_MIN_VALUE, RANDOM_MAX_VALUE
+    )
     return f"{num1} {num2}"
 
 

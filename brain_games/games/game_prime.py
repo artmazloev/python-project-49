@@ -1,5 +1,6 @@
 import random
 
+from brain_games.const import RANDOM_MAX_VALUE, RANDOM_MIN_VALUE
 from brain_games.engine import engine
 
 INSTRUCTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
@@ -15,7 +16,7 @@ def check_answer(question):
 
 
 def get_question():
-    number_for_question = random.randint(1, 100)
+    number_for_question = random.randint(RANDOM_MIN_VALUE, RANDOM_MAX_VALUE)
     return number_for_question
 
 
